@@ -29,7 +29,7 @@
     "ui",
     "qinglu"
   ],
-  "author": "zhenchekeji",
+  "author": "supan",
   "license": "MIT",
   "dependencies": {
     "@lihzsky/data-x": "^0.0.5",

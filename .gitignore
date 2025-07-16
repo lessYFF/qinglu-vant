@@ -44,3 +44,6 @@ docs/.vitepress/dist
 # OS generated files
 Thumbs.db
 .DS_Store
+
+# Vite cache
+.vite/
