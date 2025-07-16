@@ -1,0 +1,28 @@
+/* docs/.vitepress/theme/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 自定义Tailwind组件 */
+@layer components {
+  .vp-doc-full-width {
+    @apply max-w-none w-full px-content;
+  }
+  
+  .vp-container-wide {
+    @apply max-w-screen-2xl mx-auto;
+  }
+}
+
+/* 确保Tailwind不会覆盖VitePress的关键样式 */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  margin-top: var(--vp-block-top-margin);
+  margin-bottom: var(--vp-block-bottom-margin);
+  font-weight: 600;
+  line-height: 1.25;
+} 
