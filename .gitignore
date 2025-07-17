@@ -47,3 +47,6 @@ Thumbs.db
 
 # Vite cache
 .vite/
+
+#python
+final_review_gate.py
