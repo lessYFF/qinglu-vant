@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "vite --host",
-    "build": "npm run clean && npm run build:lib",
+    "build": "npm run clean && npm run build:demo",
     "build:lib": "vite build --mode lib",
     "build:demo": "vite build",
     "clean": "rimraf dist",

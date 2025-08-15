@@ -4,7 +4,7 @@ import { ref, useAttrs, watch, onMounted, onUpdated } from 'vue'
 import { FaceMediaPreview } from '..'
 import { Media } from '../../utils'
 import { nativeUploadVideo, nativeUploadImage } from '../../utils/native'
-import uploadIcon from '@/views/order/selfPickupReturn/img/jn.png'
+
 
 const attrs = useAttrs()
 const props = defineProps({
