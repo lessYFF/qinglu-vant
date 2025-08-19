@@ -3,6 +3,17 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import { viteMockServe as mockServe } from 'vite-plugin-mock'
 
+const getBase = mode => {
+  const { RESOURCES_HOST = '', APP_NAME = '', APP_VERSION = '' } = process.env
+
+  console.log('当前的运行模式', mode)
+
+  if (mode === 'development' || mode === 'preview') {
+    return '/'
+  }
+
+  return [RESOURCES_HOST, APP_NAME, APP_VERSION].filter(v => v).join('/') + '/'
+}
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }) => {
   const isLib = mode === 'lib'
@@ -40,6 +51,7 @@ export default defineConfig(({ command, mode }) => {
 
   // 开发模式配置
   return {
+    base: getBase(mode),
     define: {
       // 为浏览器环境定义环境变量
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
